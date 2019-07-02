@@ -1,0 +1,54 @@
+Single responsibility principle (SRP): This principle states that software component (function, class or module) should focus on one unique tasks (have only one responsibility).
+	*one class has one responsibility
+
+Open/closed principle (OCP): This principle states that software entities should be designed with the application growth (new code) in mind (be open to extension), but the application growth should require the smaller amount of changes to the existing code as possible (be closed for modification).
+	*dependency injection is done of interface object in constructor
+	*classes can be added
+	*object call determines the funciton of given class to call
+	*paymentmanager doesnt have to be modified(it is an abstraction)
+	*interface helps to maintain dependency
+
+Liskov substitution principle (LSP): This principle states that we should be able to replace a class in a program with another class as long as both classes implement the same interface. After replacing the class no other changes should be required and the program should continue to work as it did originally.:: 
+	*car is extended by classes that has its features and driver takes car through constructor or other methods using dependency injection e.g Car object is created on constructor and used from drive go function where car has drive function
+
+Interface segregation principle (ISP): This principle states that we should split interfaces which are very large (general-purpose interfaces) into smaller and more specific ones (many client-specific interfaces) so that clients will only have to know about the methods that are of interest to them.
+	*classes that implements interface shouldnt be forced to implment the methods that they dont use
+	*bird interface has funciton fly but penguin doesnt fly so it doesnt have to implement the interface
+
+Dependency inversion principle (DIP): This principle states that entities should depend on abstractions (interfaces) as opposed to depend on concretion (classes).
+	*computershop is the abstraction it doesnt change. classes are added: details varies on classes
+	*abstraction doesnt depend on details. details depends on abstraction
+
+So the interface(helpful for both OCP and DIP) gives an extendability and remove dependency. 
+if the details change they should not affect the abstraction (satisfy DI ). Now  we extend our new item (Tablet) without modify the ComputerShop class (satisfy OCP ).
+https://www.codeproject.com/Articles/586835/Understand-Open-Closed-Principle-and-Dependecy-Inv
+
+interface contains all the methods then class that implements it inherits the methods as its own but varies depending on the object of the class is passed
+class object can be created then passed to a mediator class... it contains object of interface in its constructor
+
+interface gives same function but different output
+it has flexibility to inherit but class doesnt
+
+Cohesion refers to what the class (or module) can do. Low cohesion would mean that the class does a great variety of actions - it is broad, unfocused on what it should do. High cohesion means that the class is focused on what it should be doing, i.e. only methods relating to the intention of the class.
+
+As for coupling, it refers to how related or dependent two classes/modules are toward each other. For low coupled classes, changing something major in one class should not affect the other. High coupling would make it difficult to change and maintain your code; since classes are closely knit together, making a change could require an entire system revamp.
+
+Good software design has high cohesion and low coupling
+
+*DRY(Dont repeat yourself)-avoids duplication in code
+*Encapsulate what changes- hides implementation detail, helps in maintenance
+*OCP(open closed design principle)-open for extension, closed for modification
+*SRP(Single Responsiblity Principle)-once class should do  one thing and do it well
+*DIP(Dependency Inversion Principle)- dont ask, let framework give to u
+*Favor Composition over Inheritance - code reuse without cost of inflexibility
+*LSP(Liskov Substitution Principle)-subtype must be substituable for subtype
+*ISP(Interface Segregation Principle)-avoid monolithic interface, reduce pain on client side
+*Programming for Interface-helps in maintenance, improves flexibility
+*Delegation principle- dont do all things yourself, delegate it
+
+encapsulation
+inheritance
+abstraction
+polymorphism
+	overloading
+	overriding
