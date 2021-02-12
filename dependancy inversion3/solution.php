@@ -32,3 +32,6 @@ transferring the task of creating the object to someone else and directly using 
 */
 //make a classs which calls sendslackmailer or smtpmailer and then pass anyone to sendwecomemessage object
 //how does interface takes class object 
+
+// MailInterface mi = new SmtpMailer();
+//mi.send();
